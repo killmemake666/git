@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>dd</title>
+</head>
+<style>
+body{
+ 
+ margin:0;
+}
+.button{
+ margin-left:600px;
+ margin-top:15px;
+}
+.form{
+ margin-left:600px;
+ margin-top:15px;
+ width:100px;
+ text-align:left;
+}
+</style>
+<body>
+<input class="button" type="submit" value="Year" onclick="a()" onclick="Refresh()">
+<input class="form" id="info1">
+<input class="button" type="submit" value="Month" onclick="b()">
+<input class="form" id="info2">
+<input class="button" type="submit" value="Day" onclick="c()">
+<input class="form" id="info3">
+<input class="button" type="submit" value="Hours" onclick="d()">
+<input class="form" id="info4">
+<input class="button" type="submit" value="Minutes" onclick="e()">
+<input class="form" id="info5">
+<input class="button" type="submit" value="Seconds" onclick="f()">
+<input class="form" id="info6">
+</body>
+<script>
+Data = new Date();
+Year = Data.getFullYear();
+Month = Data.getMonth();
+Hour = Data.getHours();
+Minutes = Data.getMinutes();
+Seconds = Data.getSeconds();
+switch (Month)
+{
+  case 0: fMonth="Январь"; break;
+  case 1: fMonth="Февраль"; break;
+  case 2: fMonth="Март"; break;
+  case 3: fMonth="Апрель"; break;
+  case 4: fMonth="Май"; break;
+  case 5: fMonth="Июнь"; break;
+  case 6: fMonth="Июль"; break;
+  case 7: fMonth="Август"; break;
+  case 8: fMonth="Сентябрь"; break;
+  case 9: fMonth="Октябрь"; break;
+  case 10: fMonth="Ноябрь"; break;
+  case 11: fMonth="Декабрь"; break;
+}
+Day = Data.getDate();
+var aa = document.getElementById('info1');
+function a(){
+    aa.value = Year;
+}
+
+var bb = document.getElementById('info2');
+function b(){
+    bb.value = fMonth;
+	}
+
+var cc = document.getElementById('info3');
+function c(){
+    cc.value = Day;
+}
+
+var dd = document.getElementById('info4');
+function d(){
+    dd.value = Hour;
+}
+
+var ee = document.getElementById('info5');
+function e(){
+    ee.value = Minutes;
+}
+
+var ff = document.getElementById('info6');
+function f(){
+		ff.value = Seconds;
+}
+
+</script>
+</html>
